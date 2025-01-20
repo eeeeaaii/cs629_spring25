@@ -18,28 +18,36 @@ if(APPLE)
    find_package(glfw3 REQUIRED)
    find_package(GLEW REQUIRED)
 
-   target_link_libraries(homework1 PRIVATE glfw GLEW::GLEW "-framework OpenGL")   
+   target_link_libraries(homework1 PRIVATE
+      glfw
+      GLEW::GLEW
+      "-framework OpenGL"
+   )   
 
 endif()
 
 if(WIN32)
-   set(DEPS "${CMAKE_CURRENT_SOURCE_DIR}/../../../dependencies")
+   set(DEPS "${CMAKE_CURRENT_SOURCE_DIR}/../dependencies")
 
-   set(GLEW_INCLUDE_DIR "${DEPS}/glew-2.1.0/include")
-   set(GLFW_INCLUDE_DIR "${DEPS}/glfw-3.4.bin.WIN64/include")
- 
-   set(GLEW_LIBRARY "${DEPS}/glew-2.1.0/lib/Release/x64/glew32.lib")
-   set(GLFW_LIBRARY "${DEPS}/glfw-3.4.bin.WIN64/lib-vc2022/glfw3.lib")
+#   set(GLEW_LIBRARY "${DEPS}/glew-2.1.0/lib/Release/x64/glew32.lib")
+#   set(GLFW_LIBRARY "${DEPS}/glfw-3.4.bin.WIN64/lib-vc2022/glfw3.lib")
 
    # Include directories
-   include_directories(${GLEW_INCLUDE_DIR} ${GLFW_INCLUDE_DIR})
-
+   target_include_directories(homework1 PRIVATE
+      "${DEPS}/glew-2.1.0/include"
+      "${DEPS}/glfw-3.3.9.bin.WIN64/include"
+   )
+   
    # Link directories
-   link_directories(
+   target_link_directories(homework1 PRIVATE
       "${DEPS}/glew-2.1.0/lib/Release/x64"
-      "${DEPS}/glfw-3.4.bin.WIN64/lib-vc2022"
+      "${DEPS}/glfw-3.3.9.bin.WIN64/lib-vc2022"
    )
 
-   target_link_libraries(homework1 PRIVATE ${GLEW_LIBRARY} ${GLFW_LIBRARY} glew32 glfw3 opengl32)
+   target_link_libraries(homework1 PRIVATE
+      glew32
+      glfw3
+      opengl32
+   )
 
 endif()

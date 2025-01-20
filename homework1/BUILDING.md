@@ -20,6 +20,8 @@ To run your program:
 
 ## Windows
 
+Right click on the "build" folder and choose "Open in Terminal". This will run Powershell.
+
 To create the build files:
 
 `cmake ..`
@@ -27,7 +29,6 @@ To create the build files:
 To build (compile) your code:
 
 `cmake --build .` (You can also build your file in Visual Studio by opening up the .sln file that CMake created for you, however I do not recommend this unless you're fairly proficient with Visual Studio).
-
 
 To run your program:
 
