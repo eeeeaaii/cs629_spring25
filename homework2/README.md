@@ -2,7 +2,7 @@
 
 The [OBJ file format](https://en.wikipedia.org/wiki/Wavefront_.obj_file) is an open source file format used to describe 3D model geometry. It was originally created by Wavefront Technologies for their Advanced Visualizer animation package, but because of its simplicity has become a de-facto standard for situations where a simple geometry description is needed for CG projects.
 
-In this homework, you will write a program in C++ that:
+In this homework, you will write a program in C or C++ that:
 
 1. Reads an OBJ file and parses it, storing it in memory in a format that will be usable by OpenGL (format provided)
 1. Call a "print_model" function (provided for you) that outputs the data to the terminal.
