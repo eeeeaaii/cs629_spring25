@@ -38,33 +38,63 @@ p0x,p0y;p1x,p1y;p2x,p2y;p3x,p3y
 
 Examples:
 
+<table><tr><td>
+
 To draw a straight line using the midpoint algorithm from (10, 11) to (100, 110):
 
-```homework3.exe --line "10,11;100,110"```
+</td><td>
 
+```homework3.exe --line "10,11;100,110"```  
+
+</td></tr><tr><td>
 To draw a straight line using box filter anti aliasing from (10, 11) to (100, 110):
+
+</td><td>
 
 ```homework3.exe --aaline "10,11;100,110"```
 
+</td></tr><tr><td>
+
 To draw a straight line using weighted area sampling anti aliasing from (10, 11) to (100, 110):
+
+</td><td>
 
 ```homework3.exe --aalinewas "10,11;100,110"```
 
+</td></tr><tr><td>
+
+
 To draw a bezier curve using the midpoint algorithm using the four control points (10, 11), (50, 11), (10, 50), (100, 110)
+
+</td><td>
 
 ```homework3.exe --bezier "10,11;50,11;10,50;100,110"```
 
-To draw a bezier curve using weighted area sampling using the four control points (10, 11), (50, 11), (10, 50), (100, 110)
+</td></tr><tr><td>
+
+To draw a bezier curve using box filter sampling using the four control points (10, 11), (50, 11), (10, 50), (100, 110)
+
+</td><td>
 
 ```homework3.exe --aabezier "10,11;50,11;10,50;100,110"```
 
+</td></tr><tr><td>
+
 To draw a faded bezier curve using the four control points (10, 11), (50, 11), (10, 50), (100, 110)
+
+</td><td>
 
 ```homework3.exe --faded "10,11;50,11;10,50;100,110"```
 
+</td></tr><tr><td>
+
 To draw three different lines using midpoint:
 
+</td><td>
+
 ```homework3.exe --line "0,0;30,30" --line "10,10;35,35" --line "30,30;130,130"```
+
+</td></tr></table>
 
 
 ## Drawing API
